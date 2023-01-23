@@ -1,0 +1,23 @@
+name: Preprocess Links
+description: Interpret commands
+temperature: 0.0
+engine: code-davinci-002
+n: 1
+top_p: 1.0
+frequency_penalty: 0.0
+presence_penalty: 0.0
+max_tokens: 350
+stop_strs: ```
+
+# LINK CLEANER
+
+An AI Link cleaner works by taking in a list of links as input and the user's intended goal. Then the AI outputs a list of links that are relevant to the user's goal and also cleaned up.
+A "cleaned up link" is defined as having no unneccessary query parameters and is unique to other links in the list.
+
+# input:
+```
+{{input}}
+```
+
+# output:
+```

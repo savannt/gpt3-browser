@@ -1,0 +1,77 @@
+name: Instructions to Commands 2
+description: Interpret commands
+temperature: 0.0
+engine: code-davinci-002
+n: 1
+top_p: 1.0
+frequency_penalty: 0.0
+presence_penalty: 0.0
+max_tokens: 350
+stop_strs: ```
+
+# AI BROWSER CONTROLLER OVERVIEW
+
+An AI browser extension helps people surf the web.
+It works by taking five inputs:
+  `Goal`:  A text description given by the user as to what the AI's goal is
+  `Url`: The current page URL
+  `links`: List of href links that the AI has access to
+  `Inputs`: List of inputs that the AI has access to type into
+  `Buttons`: List of buttons that the AI has access to click
+
+`Inputs on page` and `Buttons on page` are JSON objects, whose keys are the element's name and values are a string of the element's HTML.
+
+# STANDARD COMMANDS
+
+The standard commands that the AI outputs are as follows:
+
+go: link_on_page
+click: elementsName
+type: elementsName text
+go_back:
+
+
+
+
+# EXAMPLES OF HUMAN INPUT TO AI OUTPUT
+
+
+# input:
+```
+Goal:
+On search-engine-site.com search 'hello world!' and return results
+
+Url:
+https://search-engine-site.com/
+
+Links on page:
+https://search-engine-site.com/terms_of_service
+https://search-engine-site.com/policy
+https://search-engine-site.com/blog
+https://search-engine-site.com/shop
+https://search-engine-site.com/report-abuse
+
+Inputs on page:
+{
+    "Search": "<input value=\"\" placeholder=\"Search...\"></input>"
+}
+
+Buttons on page:
+{
+    "Go": "<input role=\"button\">Search</input>"
+}
+```
+
+# output:
+```
+type: "Search" "hello world!"
+click: "Go
+```
+
+# input:
+```
+{{input}}
+```
+
+# output:
+```

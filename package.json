@@ -1,0 +1,20 @@
+{
+  "name": "gpt3-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "GPT3Web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savannt/gpt3-browser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savannt/gpt3-browser/issues"
+  },
+  "homepage": "https://github.com/savannt/gpt3-browser#readme"
+}
